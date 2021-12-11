@@ -5,7 +5,7 @@
     <ProjectGuid>01651a67-e00c-47fc-b76c-fd808becbd91</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>HelloSubstancePython.py</StartupFile>
+    <StartupFile>HelloPlugin\HelloSubstancePython.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,13 +22,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HelloPluginTest.py">
+    <Compile Include="AutoMaterialImporter\MaterialSearch.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HelloSubstancePython.py" />
-    <Compile Include="HelloPlugin.py">
+    <Compile Include="HelloPlugin\HelloPluginTest.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="HelloPlugin\HelloSubstancePython.py" />
+    <Compile Include="HelloPlugin\HelloPlugin.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HelloPlugin\" />
+    <Folder Include="AutoMaterialImporter\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
