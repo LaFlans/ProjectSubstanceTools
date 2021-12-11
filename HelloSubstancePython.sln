@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31903.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "SubstanceToolsProject", "HelloSubstancePython\SubstanceToolsProject.pyproj", "{01651A67-E00C-47FC-B76C-FD808BECBD91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01651A67-E00C-47FC-B76C-FD808BECBD91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01651A67-E00C-47FC-B76C-FD808BECBD91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {279CB16F-B93C-453F-8C9E-33F1DC6D3BFF}
+	EndGlobalSection
+EndGlobal
