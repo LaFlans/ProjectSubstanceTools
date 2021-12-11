@@ -7,11 +7,10 @@ for name in all_plugins_names:
 
 plugin = importlib.import_module("HelloPlugin")
 
-# w’è‚µ‚½ƒvƒ‰ƒOƒCƒ“‚ªŠJn‚³‚ê‚Ä‚¢‚È‚¢ê‡
+# æŒ‡å®šã—ãŸãƒ—ãƒ©ã‚°ã‚¤ãƒ³ãŒé–‹å§‹ã•ã‚Œã¦ã„ãªã„å ´åˆ
 if not substance_painter_plugins.is_plugin_started(plugin):
-    # w’è‚µ‚½ƒvƒ‰ƒOƒCƒ“‚ğ‹N“®
+    # æŒ‡å®šã—ãŸãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’èµ·å‹•
     substance_painter_plugins.start_plugin(plugin)
-
 
 def start_plugin():
     print("start")

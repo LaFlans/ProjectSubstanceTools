@@ -4,7 +4,7 @@ import substance_painter.ui
 plugin_widgets = []
 
 def start_plugin():
-    # プラグインが開始した時に呼ばれる
+    # 繝励Λ繧ｰ繧､繝ｳ縺碁幕蟋九＠縺滓凾縺ｫ蜻ｼ縺ｰ繧後ｋ
     hello_widget = QtWidgets.QTextEdit()
     hello_widget.setText("Hello from python scripting!")
     hello_widget.setReadOnly(True)
