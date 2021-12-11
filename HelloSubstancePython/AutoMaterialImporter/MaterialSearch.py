@@ -6,32 +6,36 @@ import mojimoji
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-# ChromeDriver‚Ìƒtƒ‹ƒpƒX
-CHROMEDRIVER_PATH = "C:\\Users\\shouy\\Desktop\\Tools\\chromedriver.exe"
-# ‘JˆÚŠÔŠu(•b)
+# é·ç§»é–“éš”(ç§’)
 INTERVAL_TIME = 3
-# ƒwƒbƒhƒŒƒXƒ‚[ƒh
+# ãƒ˜ãƒƒãƒ‰ãƒ¬ã‚¹ãƒ¢ãƒ¼ãƒ‰
 IS_HEADLESS = True
 
-# ƒhƒ‰ƒCƒo[€”õ
+# ãƒ‰ãƒ©ã‚¤ãƒãƒ¼æº–å‚™
 def get_driver():
     if (IS_HEADLESS):
-        # ƒwƒbƒhƒŒƒXƒ‚[ƒh‚Åƒuƒ‰ƒEƒU‚ğ‹N“®
+        # ãƒ˜ãƒƒãƒ‰ãƒ¬ã‚¹ãƒ¢ãƒ¼ãƒ‰ã§ãƒ–ãƒ©ã‚¦ã‚¶ã‚’èµ·å‹•
         options = Options()
         options.add_argument('--headless')
 
-        # ƒuƒ‰ƒEƒU‚ğ‹N“®
-        driver = webdriver.Chrome(CHROMEDRIVER_PATH,options=options)
+        # ãƒ–ãƒ©ã‚¦ã‚¶ã‚’èµ·å‹•
+        driver = webdriver.Chrome(ChromeDriverManager().install(),options=options)
     else:
-        driver = webdriver.Chrome(CHROMEDRIVER_PATH)
+        driver = webdriver.Chrome(ChromeDriverManager().install())
     
-    return drive
+    return driver
 
-if __name_=="__main__":
-    # ƒuƒ‰ƒEƒU‚Ìdriveræ“¾
+if __name__=="__main__":
+    # ãƒ–ãƒ©ã‚¦ã‚¶ã®driverå–å¾—
     driver = get_driver()
 
+    driver.get('https://www.google.com/')
+    print(driver.title)
+
+    # driverã‚’é–‰ã˜ã‚‹
+    driver.quit()
